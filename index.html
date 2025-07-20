@@ -2,72 +2,103 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Adigun Abdulaziz Olagoke - Web Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SHADES BY COCO DAMMY</title>
   <style>
     body {
+      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f2f2f2;
+      background-color: #f7f7f7;
       color: #333;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding-top: 50px;
     }
-
-    .card {
-      background-color: white;
-      border-radius: 12px;
-      padding: 30px;
-      max-width: 500px;
-      width: 90%;
+    header {
+      background-color: #000;
+      color: white;
+      padding: 20px;
       text-align: center;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     }
-
-    img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      margin-bottom: 20px;
-      object-fit: cover;
+    .intro {
+      padding: 20px;
+      text-align: center;
+      font-size: 1.2em;
     }
-
-    h1 {
-      color: #2e8b57;
-      margin: 10px 0;
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
     }
-
-    p {
-      font-size: 16px;
-      line-height: 1.5;
+    .item {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      max-width: 280px;
+      text-align: center;
+      padding: 15px;
     }
-
-    .links a {
-      margin: 10px;
-      color: #2e8b57;
-      text-decoration: none;
+    .item img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .item h3 {
+      margin: 10px 0 5px;
+    }
+    .item p {
       font-weight: bold;
+      color: #e91e63;
     }
-
-    .links a:hover {
-      text-decoration: underline;
+    .item a {
+      display: inline-block;
+      margin-top: 10px;
+      text-decoration: none;
+      background: #25d366;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 5px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #777;
     }
   </style>
 </head>
 <body>
-  <div class="card">
-    <img src="https://i.postimg.cc/4yGbhPn1/fotor-1714862098215.jpg" alt="Azeez Olagoke" />
-    <h1>Adigun Abdulaziz Olagoke</h1>
-    <p>I offer clean, beginner-friendly websites — with free hosting and budget-friendly plans.</p>
-    
-    <div class="links">
-      <a href="mailto:haezhed01@gmail.com">Email</a>
-      <a href="https://github.com/dahmonster" target="_blank">GitHub</a>
-      <a href="https://wa.me/2349138021278" target="_blank">WhatsApp</a>
+
+  <header>
+    <h1>SHADES BY COCO DAMMY</h1>
+  </header>
+
+  <section class="intro">
+    <p>Stylish, affordable sunglasses for every vibe. Tap to order directly via WhatsApp!</p>
+  </section>
+
+  <section class="gallery">
+    <div class="item">
+      <img src="https://i.postimg.cc/Xv3s5nh5/images.jpg" alt="Classic Dark Shade">
+      <h3>Classic Dark Shade</h3>
+      <p>₦6,500</p>
+      <a href="https://wa.me/2349138021278?text=Hi%2C%20I%20want%20to%20order%20the%20Classic%20Dark%20Shade.">Order on WhatsApp</a>
     </div>
-  </div>
+    <div class="item">
+      <img src="https://i.postimg.cc/T1y0x1yz/download.jpg" alt="Bold Curve Lens">
+      <h3>Bold Curve Lens</h3>
+      <p>₦7,000</p>
+      <a href="https://wa.me/2349138021278?text=Hi%2C%20I%20want%20to%20order%20the%20Bold%20Curve%20Lens.">Order on WhatsApp</a>
+    </div>
+    <div class="item">
+      <img src="https://i.postimg.cc/Xv3s5nh5/images.jpg" alt="Retro Round Glasses">
+      <h3>Retro Round Glasses</h3>
+      <p>₦5,800</p>
+      <a href="https://wa.me/2349138021278?text=Hi%2C%20I%20want%20to%20order%20the%20Retro%20Round%20Glasses.">Order on WhatsApp</a>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Shades by Coco Dammy. All rights reserved.
+  </footer>
+
 </body>
-  </html>
+</html>

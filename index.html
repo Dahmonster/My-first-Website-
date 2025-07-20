@@ -1,104 +1,133 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SHADES BY COCO DAMMY</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DahShades</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #000000;
+      --card-bg: #f5f5f5;
+    }
+    [data-theme="dark"] {
+      --bg-color: #121212;
+      --text-color: #ffffff;
+      --card-bg: #1e1e1e;
+    }
+    * {
       margin: 0;
-      background-color: #f7f7f7;
-      color: #333;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
     }
-    header {
-      background-color: #000;
-      color: white;
-      padding: 20px;
-      text-align: center;
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: all 0.3s ease;
     }
-    .intro {
-      padding: 20px;
-      text-align: center;
-      font-size: 1.2em;
-    }
-    .gallery {
+    nav {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      padding: 20px;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: var(--card-bg);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
-    .item {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.1);
-      max-width: 280px;
-      text-align: center;
-      padding: 15px;
-    }
-    .item img {
-      width: 100%;
-      border-radius: 10px;
-    }
-    .item h3 {
-      margin: 10px 0 5px;
-    }
-    .item p {
+    .brand {
+      font-size: 1.5rem;
       font-weight: bold;
       color: #e91e63;
     }
-    .item a {
-      display: inline-block;
-      margin-top: 10px;
+    .nav-links a {
+      margin-left: 1rem;
       text-decoration: none;
-      background: #25d366;
+      color: var(--text-color);
+    }
+    .theme-toggle {
+      cursor: pointer;
+      font-size: 1.2rem;
+    }
+    section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 1rem;
+    }
+    .card {
+      background: var(--card-bg);
+      border-radius: 10px;
+      overflow: hidden;
+      padding: 0.5rem;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: scale(1.02);
+    }
+    .card img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .card h4 {
+      margin: 0.5rem 0;
+    }
+    .whatsapp-btn {
+      display: inline-block;
+      margin-top: 0.3rem;
+      background-color: #25D366;
       color: white;
-      padding: 10px 15px;
+      padding: 0.3rem 0.6rem;
       border-radius: 5px;
+      text-decoration: none;
+      font-size: 0.8rem;
     }
     footer {
       text-align: center;
-      padding: 20px;
-      font-size: 0.9em;
-      color: #777;
+      padding: 1rem;
+      background: var(--card-bg);
     }
   </style>
 </head>
 <body>
-
-  <header>
-    <h1>SHADES BY COCO DAMMY</h1>
-  </header>
-
-  <section class="intro">
-    <p>Stylish, affordable sunglasses for every vibe. Tap to order directly via WhatsApp!</p>
-  </section>
-
-  <section class="gallery">
-    <div class="item">
-      <img src="https://i.postimg.cc/Xv3s5nh5/images.jpg" alt="Classic Dark Shade">
-      <h3>Classic Dark Shade</h3>
-      <p>₦6,500</p>
-      <a href="https://wa.me/2349138021278?text=Hi%2C%20I%20want%20to%20order%20the%20Classic%20Dark%20Shade.">Order on WhatsApp</a>
+  <nav>
+    <div class="brand">DahShades</div>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#products">Products</a>
+      <a href="#order">How to Order</a>
+      <a href="#contact">Contact</a>
+      <span class="theme-toggle" onclick="toggleTheme()">
+        <i class="fas fa-adjust"></i>
+      </span>
     </div>
-    <div class="item">
-      <img src="https://i.postimg.cc/T1y0x1yz/download.jpg" alt="Bold Curve Lens">
-      <h3>Bold Curve Lens</h3>
-      <p>₦7,000</p>
-      <a href="https://wa.me/2349138021278?text=Hi%2C%20I%20want%20to%20order%20the%20Bold%20Curve%20Lens.">Order on WhatsApp</a>
-    </div>
-    <div class="item">
-      <img src="https://i.postimg.cc/Xv3s5nh5/images.jpg" alt="Retro Round Glasses">
-      <h3>Retro Round Glasses</h3>
-      <p>₦5,800</p>
-      <a href="https://wa.me/2349138021278?text=Hi%2C%20I%20want%20to%20order%20the%20Retro%20Round%20Glasses.">Order on WhatsApp</a>
-    </div>
-  </section>
-
-  <footer>
-    &copy; 2025 Shades by Coco Dammy. All rights reserved.
-  </footer>
-
-</body>
-</html>
+  </nav>  <section id="home">
+    <h1>Welcome to DahShades</h1>
+    <p>Your go-to place for trendy and affordable sunglasses delivered via WhatsApp.</p>
+  </section>  <section id="products">
+    <h2>Our Products</h2>
+    <div class="products">
+      <div class="card">
+        <img src="https://i.postimg.cc/4yGbhPn1/fotor-1714862098215.jpg" alt="Shades 1" />
+        <h4>Classic Black</h4>
+        <a class="whatsapp-btn" href="https://wa.me/2349138021278?text=I'm%20interested%20in%20the%20Classic%20Black%20Shades">Order <i class="fab fa-whatsapp"></i></a>
+      </div>
+      <div class="card">
+        <img src="https://i.postimg.cc/T1y0x1yz/download.jpg" alt="Shades 2" />
+        <h4>Retro Brown</h4>
+        <a class="whatsapp-btn" href="https://wa.me/2349138021278?text=I'm%20interested%20in%20the%20Retro%20Brown%20Shades">Order <i class="fab fa-whatsapp"></i></a>
+      </div>
+      <div class="card">
+        <img src="https://i.postimg.cc/Xv3s5nh5/images.jpg" alt="Shades 3" />
+        <h4>Urban Blue</h4>
+        <a class="whatsapp-btn" href="https://wa.me/2349138021278?text=I'm%20interested%20in%20the%20Urban%20Blue%20Shades">Order <i class="fab fa-whatsapp"></i></a>
+  </div>
